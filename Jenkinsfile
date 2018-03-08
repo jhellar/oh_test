@@ -13,7 +13,7 @@ BUILD_CONFIG = params?.BUILD_CONFIG?.trim()                                // e.
 
 // sample values commented below are for https://github.com/feedhenry-templates/helloworld-ios
 /* ------------- use these to hardcode values in Jenkinsfile ---------------- */
-PROJECT_NAME = "helloworld-ios-app"
+PROJECT_NAME = "HelloWorld"
 INFO_PLIST = "HelloWorld/Info.plist"
 VERSION = "1.0.0"
 SHORT_VERSION = "1.0"
@@ -75,7 +75,6 @@ node('ios') {
                     cleanBeforeBuild: CLEAN,
                     src: './',
                     schema: "${PROJECT_NAME}",
-                    workspace: "${PROJECT_NAME}",
                     buildDir: "build",
                     sdk: "${SDK}",
                     version: "${VERSION}",
